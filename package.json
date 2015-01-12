@@ -1,10 +1,10 @@
 {
-  "name": "atom-dark-ui",
+  "name": "jonikorpi-atom-theme-ui",
   "theme": "ui",
   "version": "0.43.0",
-  "description": "Default dark theme for interface components",
+  "description": "A minimalistic UI theme, with colors based on [Solarized](http://ethanschoonover.com/solarized) and styling loosely based on [Light Table](http://lighttable.com). Created by [@jonikorpi](https://twitter.com/jonikorpi).",
   "license": "MIT",
-  "repository": "https://github.com/atom/atom-dark-ui",
+  "repository": "https://github.com/jonikorpi/jonikorpi-atom-theme",
   "engines": {
     "atom": ">0.40.0"
   }

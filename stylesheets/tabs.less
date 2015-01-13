@@ -80,10 +80,15 @@
       z-index: 3;
       text-align: right;
       line-height: @tab-height;
-      color: @text-color;
+      color: transparent;
+    }
+
+    &.active .close-icon,
+    &:hover .close-icon {
+      color: @text-color-subtle;
 
       &:hover {
-        color: inherit;
+        color: @text-color-warning;
       }
     }
 
@@ -96,7 +101,7 @@
     }
 
     &.modified:hover .close-icon:hover {
-      color: @text-color-highlight;
+      color: @text-color-warning;
     }
 
     .title{
@@ -113,7 +118,6 @@
 
     .close-icon {
       line-height: @tab-height - 1px;
-      color: @text-color;
     }
 
     &, &:before, &:after {
@@ -133,14 +137,6 @@
 
   .tab:hover {
     color: @text-color-highlight;
-  }
-
-  .tab.active:hover .close-icon {
-    color: @text-color;
-
-    &:hover {
-      color: inherit;
-    }
   }
 
   .placeholder {

@@ -3,3 +3,7 @@ A minimalistic UI theme, with colors based on [Solarized](http://ethanschoonover
 # Installation
 
 Search for "jonikorpi" in the Install/Themes section of your Atom settings.
+
+You should use this theme with Atom's own "Solarized Dark" syntax theme.
+
+If you have [Input Sans Narrow](http://input.fontbureau.com/download) installed, it will be used as the UI font.

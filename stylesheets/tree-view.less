@@ -44,7 +44,22 @@
   }
 }
 
-// Gap on the right side of editor
+//
+// Hacks
+
+.tree-view {
+  padding: @component-padding;
+}
+
 .item-views {
-  border-right: 10px solid @base02;
+  border: solid @base02;
+  border-width: 0 @component-padding;
+
+  .editor {
+
+  }
+}
+
+status-bar .flexbox-repaint-hack {
+  padding-top: 2px;
 }

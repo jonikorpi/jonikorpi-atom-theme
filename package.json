@@ -1,7 +1,7 @@
 {
   "name": "jonikorpi-atom-theme-ui",
   "theme": "ui",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A minimalistic UI theme, with colors based on [Solarized](http://ethanschoonover.com/solarized) and styling loosely based on [Light Table](http://lighttable.com). Created by [@jonikorpi](https://twitter.com/jonikorpi).",
   "license": "MIT",
   "repository": "https://github.com/jonikorpi/jonikorpi-atom-theme",

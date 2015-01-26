@@ -24,3 +24,24 @@ atom-text-editor, atom-text-editor::shadow {
     -webkit-box-shadow: -2px 0 10px 2px #222;
   }
 }
+
+atom-text-editor, atom-text-editor::shadow {
+  .cursor {
+    border-color: @magenta;
+    border-left-width: 2px;
+  }
+
+  .cursor-line {
+    background: fade(#000, 9%);
+  }
+
+  .selection .region {
+    
+  }
+
+  .bracket-matcher .region {
+    border-bottom: 1px solid @magenta;
+    background: fade(@magenta, 50%);
+    opacity: 1;
+  }
+}

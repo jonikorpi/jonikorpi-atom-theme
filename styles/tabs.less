@@ -1,9 +1,9 @@
 @modified-icon-width: @font-size*1.5;
-@tab-border-size: 1px;
+@tab-border-size: 0;
 @tab-border: @tab-border-size solid @tab-border-color;
 @tab-max-width: @font-size*15;
 @tab-min-width: @font-size*3.2;
-@tab-padding: @component-padding/1.5;
+@tab-padding: @component-padding;
 
 .tab-bar {
   height: @tab-height;
@@ -11,6 +11,7 @@
   background: @tab-bar-background-color;
   overflow-x: auto;
   overflow-y: hidden;
+  text-align: left;
 
   &::-webkit-scrollbar {
     display: none;
@@ -48,10 +49,14 @@
       padding: 0 @tab-padding;
     }
 
+    &.active .title {
+      padding-right: @tab-padding * 2.25 !important
+    }
+
     .close-icon {
       right: 0;
       z-index: 3;
-      margin-right: @tab-padding;
+      margin-right: @tab-padding * 0.75;
       text-align: center;
       top: 0;
       height: @tab-height;
@@ -79,7 +84,6 @@
   .tab.active {
     z-index: 1;
     flex: 2 0 auto;
-    padding-right: @modified-icon-width;
     background-color: @tab-background-color-active;
     opacity: 1;
 
@@ -179,22 +183,22 @@
 
 // Active pane marker --------------
 
-.tab-bar:empty:before,
-.tab-bar .tab:before {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: @tab-height;
-  background: @base-accent-color;
-  transform: scaleY(0);
-  transition: transform .08s;
-}
-
-atom-pane.active .tab-bar:empty:before,
-atom-pane.active .tab.active:before {
-  transform: scaleY(1);
-}
+// .tab-bar:empty:before,
+// .tab-bar .tab:before {
+//   content: "";
+//   position: absolute;
+//   pointer-events: none;
+//   z-index: 2;
+//   top: 0;
+//   left: 0;
+//   width: 2px;
+//   height: @tab-height;
+//   background: @base-accent-color;
+//   transform: scaleY(0);
+//   transition: transform .08s;
+// }
+//
+// atom-pane.active .tab-bar:empty:before,
+// atom-pane.active .tab.active:before {
+//   transform: scaleY(1);
+// }

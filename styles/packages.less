@@ -1,0 +1,102 @@
+// Overrides packages
+
+// find-and-replace ---------------------------
+.find-and-replace {
+
+  .btn,
+  .btn-group-options.btn-group .btn,
+  .btn-group-options.btn-group .btn.option-selection,
+  .btn-group-options.btn-group .btn.option-whole-word {
+    font-size: @font-size*1.25;
+    padding: 0;
+  }
+
+  .btn-group {
+    &.btn-group-options {
+      width: @font-size * 10;
+      display: flex;
+      & > .btn {
+        flex: 1;
+      }
+      .btn.option-selection {
+        padding-top: 0;
+      }
+    }
+    &.btn-group-replace-all {
+      width: @font-size * 10;
+    }
+    &.btn-group-find,
+    &.btn-group-replace {
+      width: @font-size * 7.5;
+    }
+  }
+
+  // atom-text-editor[mini]
+  .find-meta-container {
+    top: @font-size*.35; // 1.25 (parent font-size) - 0.9 (font-size)
+  }
+}
+
+
+// project-find ---------------------------
+.project-find {
+  .btn,
+  .btn-group.btn-group-options .btn {
+    font-size: @font-size*1.25;
+    padding: 0;
+  }
+  .btn-group {
+    &.btn-group-replace-all,
+    &.btn-group-options {
+      width: @font-size * 10;
+    }
+  }
+}
+
+
+// markdown-preview ---------------------------
+.markdown-preview {
+  font-size: @font-size*1.25;
+  color: @markdown-preview-color;
+  background-color: @markdown-preview-background-color;
+
+
+  h1, h2 {
+    color: inherit;
+    border-color: @base-border-color;
+  }
+
+  a {
+    color: @text-color-info;
+  }
+
+  hr {
+    background-color: @markdown-preview-background-color;
+  }
+
+  blockquote {
+    color: @text-color;
+    border-left-color: @text-color-subtle;
+  }
+
+  code {
+    color: @markdown-preview-code-color;
+    border-color: @base-border-color;
+    background-color: @markdown-preview-code-background-color;
+    background-clip: padding-box;
+  }
+
+  atom-text-editor::shadow {
+    .line.cursor-line {
+      background-color: transparent;
+    }
+  }
+}
+
+// Active tab for default background
+.tab.active[data-type="MarkdownPreviewView"] {
+  background-color: @markdown-preview-background-color;
+  &:after {
+    border-bottom-color: @markdown-preview-background-color;
+  }
+}

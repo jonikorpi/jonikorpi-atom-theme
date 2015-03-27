@@ -1,7 +1,3 @@
-@import "ui-mixins";
-@import "ui-variables";
-@import "buttons";
-
 .panel {
   &.bordered {
     border: 1px solid @base-border-color;
@@ -9,49 +5,37 @@
   }
 }
 
-atom-panel, .tool-panel {
+atom-panel {
   .text(normal);
   position: relative;
 
-  background-color: @tool-panel-background-color;
-
-  &.bottom, &.panel-bottom {
-    border-bottom: 1px solid @tool-panel-border-color;
-
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  &.left, &.panel-left {
+  &.left {
     border-right: 1px solid @tool-panel-border-color;
   }
-
-  &.right, &.panel-right {
+  &.right {
     border-left: 1px solid @tool-panel-border-color;
+  }
+  &.bottom {
+    border-top: 1px solid @tool-panel-border-color;
   }
 }
 
 .inset-panel {
   position: relative;
   background-color: @inset-panel-background-color;
-}
-
-.is-blurred {
-  atom-panel,
-  .inset-panel {
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+  & .panel-heading {
+    border-color: @inset-panel-border-color;
   }
 }
 
 .panel-heading {
   .text(normal);
-
-  // border-bottom: 1px solid @panel-heading-border-color;
-  // border-top: 1px solid fadein(@background-color-highlight, 10%);
-
-  background-color: @background-color-info;
-  color: @text-color-info;
-  // background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
+  border-bottom: 1px solid @panel-heading-border-color;
+  background-color: @panel-heading-background-color;
 
   .btn {
     padding-left: 8px;
@@ -61,6 +45,6 @@ atom-panel, .tool-panel {
     @hover: lighten(@button-background-color-hover, 10%);
     @selected: lighten(@button-background-color-selected, 10%);
     @text: lighten(@text-color, 10%);
-    .btn-background(@bg, @hover, @selected, @text);
+    .btn-default(@bg, @hover, @selected, @text);
   }
 }

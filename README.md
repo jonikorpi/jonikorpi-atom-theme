@@ -1,5 +1,7 @@
 A minimalistic UI theme based on One Dark. Styling loosely based on [Light Table](http://lighttable.com). Created by [@jonikorpi](https://twitter.com/jonikorpi).
 
+![screenshot](https://dl.dropboxusercontent.com/u/1231109/Screenshot%202015-03-28%2001.37.48.png)
+
 # Installation
 
 Search for "jonikorpi" in the Install/Themes section of your Atom settings.

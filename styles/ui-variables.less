@@ -1,32 +1,32 @@
 /* jonikorpi UI variables (all imported syntax variables)
 ** ------------------------------------------------------ */
 // // General colors
-// @syntax-text-color: @base0;
-// @syntax-cursor-color: @base3;
-// @syntax-selection-color: lighten(@base02, 1%);
-// @syntax-selection-flash-color: @base1;
-// @syntax-background-color: @base03;
+// @syntax-text-color
+// @syntax-cursor-color
+// @syntax-selection-color
+// @syntax-selection-flash-color
+// @syntax-background-color
 //
 // // Guide colors
-// @syntax-wrap-guide-color: @base02;
-// @syntax-indent-guide-color: fadeout(@base00, 80%);
-// @syntax-invisible-character-color: fadeout(@base00, 80%);
+// @syntax-wrap-guide-color
+// @syntax-indent-guide-color
+// @syntax-invisible-character-color
 //
 // // For find and replace markers
-// @syntax-result-marker-color: @cyan;
-// @syntax-result-marker-color-selected: @base3;
+// @syntax-result-marker-color
+// @syntax-result-marker-color-selected
 //
 // // Gutter colors
-// @syntax-gutter-text-color: @base0;
-// @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-// @syntax-gutter-background-color: @base02;
-// @syntax-gutter-background-color-selected: lighten(@base02, 6%);
+// @syntax-gutter-text-color
+// @syntax-gutter-text-color-selected
+// @syntax-gutter-background-color
+// @syntax-gutter-background-color-selected
 //
 // // For git diff info. i.e. in the gutter
-// @syntax-color-renamed: @blue;
-// @syntax-color-added: @green;
-// @syntax-color-modified: @yellow;
-// @syntax-color-removed: @red;
+// @syntax-color-renamed
+// @syntax-color-added
+// @syntax-color-modifi;
+// @syntax-color-removed
 
 
 /* ONE dark UI variables
@@ -87,18 +87,18 @@
 
 // Base -----------------
 @base-background-color: @syntax-background-color;
-@base-border-color:     fade(@syntax-cursor-color, 9%);
+@base-border-color:     darken(@syntax-background-color, 2.1%);
 
 
 // Components -----------------
 @pane-item-background-color:       @base-background-color;
-@pane-item-border-color:           @base-border-color;
+@pane-item-border-color:           @syntax-gutter-background-color;
 
-@input-background-color:           hsla(0,0%,0%,.236);
+@input-background-color:           hsla(0,0%,0%,.146);
 @input-border-color:               hsla(0,0%,0%,.236);
 
-@tool-panel-background-color:      @level-3-color;
-@tool-panel-border-color:          @base-border-color;
+@tool-panel-background-color:      @syntax-gutter-background-color;
+@tool-panel-border-color:          transparent;
 
 @inset-panel-background-color:     lighten(@level-2-color, 5.6%);
 @inset-panel-border-color:         fadeout(@base-border-color, 14.6%);
@@ -114,13 +114,13 @@
 @button-background-color-selected: @base-accent-color;
 @button-border-color:              @base-border-color;
 
-@tab-bar-background-color:         @level-3-color;
+@tab-bar-background-color:         @syntax-gutter-background-color;
 @tab-bar-border-color:             @base-border-color;
-@tab-background-color:             @level-3-color;
-@tab-background-color-active:      @level-2-color;
-@tab-border-color:                 @base-border-color;
+@tab-background-color:             @tab-bar-background-color;
+@tab-background-color-active:      @base-background-color;
+@tab-border-color:                 transparent;
 
-@tree-view-background-color:       @level-3-color;
+@tree-view-background-color:       @base-background-color;
 @tree-view-border-color:           @base-border-color;
 
 @ui-site-color-1: @background-color-success;
@@ -166,13 +166,13 @@
 
 
 // Background (Custom) -----------------
-@level-1-color: lighten(@base-background-color, 5.6%);
-@level-2-color: @base-background-color;
-@level-3-color: darken(@base-background-color, 3.4%);
+@level-1-color: @base-background-color;
+@level-2-color: @syntax-selection-color;
+@level-3-color: @syntax-gutter-background-color;
 
 
 // Base -----------------
-@base-accent-color: shade(@text-color-info, 23.6%);
+@base-accent-color: mix(@text-color-info, @base-background-color, 38.2%);
 
 
 // Components (Custom) -----------------

@@ -1,4 +1,23 @@
-@import "ui-variables";
+@tree-view-height: @component-padding*1.5;
+
+.tree-view {
+  font-size: @font-size;
+  background: @tree-view-background-color;
+
+  .project-root.project-root {
+    &:before {
+      height: @tab-height;
+      border-bottom: 1px solid @base-border-color;
+    }
+    & > .header .name {
+      line-height: @tab-height;
+    }
+  }
+
+  .selected:before {
+    background: @background-color-highlight;
+  }
+}
 
 .tree-view-resizer {
   .tree-view-resize-handle {
@@ -6,60 +25,28 @@
   }
 }
 
-.focusable-panel {
-  opacity: 1;
-  background: @base03;
-  // box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
+// Variable height, based on ems
+.list-group li:not(.list-nested-item),
+.list-tree li:not(.list-nested-item),
+.list-group li.list-nested-item > .list-item,
+.list-tree li.list-nested-item > .list-item {
+  line-height: @tree-view-height;
+}
 
-  &:focus {
-    // background: #282828;
+.list-group .selected::before,
+.list-tree .selected::before {
+  height: @tree-view-height;
+}
 
-    .selected:before {
-      background: @background-color-selected;
-    }
-
-    .selected > .name,
-    .selected > .name:before,
-    .selected > .list-item > .name,
-    .selected > .list-item > .name:before {
-      color: @base2 !important;
-    }
+// icon
+.list-group .icon,
+.list-tree .icon {
+  display: inline-block;
+  height: inherit;
+  &::before {
+    top: initial;
+    line-height: inherit;
+    height: inherit;
+    vertical-align: top;
   }
-}
-
-.tree-view {
-  font-size: @font-size;
-  background: @tree-view-background-color;
-
-  .selected:before {
-    background: @base03;
-    // box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
-  }
-}
-
-[data-show-on-right-side=true] {
-  .tree-view .selected:before,
-  .focusable-panel {
-    // box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
-  }
-}
-
-//
-// Hacks
-
-.tree-view {
-  padding: @component-padding;
-}
-
-.item-views {
-  border: solid @base02;
-  border-width: 0 @component-padding;
-
-  atom-text-editor::shadow {
-
-  }
-}
-
-status-bar .flexbox-repaint-hack {
-  padding-top: 2px;
 }

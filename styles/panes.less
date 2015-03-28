@@ -9,17 +9,17 @@ atom-pane-container {
   atom-pane {
     position: relative;
     background-color: @app-background-color;
+    border: solid @pane-item-border-color;
+    border-width: 0 @component-padding / 2;
   }
 
   atom-pane-axis {
     &.horizontal > * {
-      border-right: 1px solid @pane-item-border-color;
-      &:last-child { border-right: none; }
+      // border-left-width: 0;
     }
 
     &.vertical > * {
-      border-bottom: 1px solid @pane-item-border-color;
-      &:last-child { border-bottom: none; }
+      // border-bottom: @component-padding / 2 solid @pane-item-border-color;
     }
   }
 }

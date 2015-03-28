@@ -1,6 +1,6 @@
 A minimalistic UI theme based on One Dark. Styling loosely based on [Light Table](http://lighttable.com). Created by [@jonikorpi](https://twitter.com/jonikorpi).
 
-![screenshot](https://dl.dropboxusercontent.com/u/1231109/Screenshot%202015-03-28%2001.37.48.png)
+![screenshot](https://dl.dropboxusercontent.com/u/1231109/Screenshot%202015-03-28%2002.20.17.png)
 
 # Installation
 

@@ -9,8 +9,23 @@ atom-pane-container {
   atom-pane {
     position: relative;
     background-color: @app-background-color;
-    border: solid @pane-item-border-color;
-    border-width: 0 @base-border-thickness 0 0;
+  }
+
+  atom-pane,
+  .pane-column {
+    border: 0 solid @pane-item-border-color;
+  }
+
+  .pane-column + .pane-column,
+  .pane-column + atom-pane,
+  atom-pane + .pane-column,
+  atom-pane + atom-pane {
+    border-left-width: @base-border-thickness;
+  }
+
+  .pane-column > atom-pane + atom-pane {
+    border-top-width: @base-border-thickness;
+    border-left-width: 0;
   }
 
   atom-pane-axis {

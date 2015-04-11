@@ -12,18 +12,18 @@ atom-pane-container {
   }
 
   atom-pane,
-  .pane-column {
+  atom-pane-axis.vertical {
     border: 0 solid @pane-item-border-color;
   }
 
-  .pane-column + .pane-column,
-  .pane-column + atom-pane,
-  atom-pane + .pane-column,
+  atom-pane-axis.vertical + atom-pane-axis.vertical,
+  atom-pane-axis.vertical + atom-pane,
+  atom-pane + atom-pane-axis.vertical,
   atom-pane + atom-pane {
     border-left-width: @base-border-thickness;
   }
 
-  .pane-column > atom-pane + atom-pane {
+  atom-pane-axis.vertical > atom-pane + atom-pane {
     border-top-width: @base-border-thickness;
     border-left-width: 0;
   }
